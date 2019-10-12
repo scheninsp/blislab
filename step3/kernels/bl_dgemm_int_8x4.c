@@ -165,7 +165,7 @@ void bl_dgemm_int_8x4(
 		vtmp = _mm256_mul_pd( va4_7, vb2 );
 		va4_7b_2 = _mm256_add_pd( va4_7b_2, vtmp );
 
-		// Shuffle vb (b3,b2,b1,b0)
+		// Shuffle vb (b2,b3,b0,b1)
  		vb3 = _mm256_shuffle_pd( vb2, vb2, 0x5 );
 
 		vtmp = _mm256_mul_pd( va0_3, vb3 );
